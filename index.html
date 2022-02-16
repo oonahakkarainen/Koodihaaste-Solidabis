@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Koodihaaste</title>
+  <link rel="icon" href="minilogo.jpg">
+  <link href="tyyli.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rhodium+Libre&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <img src=solidabislogo.png class="logo" alt="logo">
+  <br>
+  <h2>Koodihaaste</h2>
+  <nav class="topnav" id="mainNav">
+    <div class="container">
+      <a class="navr" href="#autoA">Auto A</a>
+      <a class="nav" href="#autoB">Auto B</a>
+      <a class="nav" href="#autoC">Auto C</a>
+    </div>
+  </nav>
+  <img src=auto1.png class="auto page-section" id="autoA">
+  <div id="autot">
+    <div class="tooltip"> Auto A
+      <span class="tooltiptext">3L/100km</span>
+    </div>
+    <br>
+    <br>
+    <label>Etäisyys:</label>
+    <input type="text" onfocus="this.value=''" id="km" size="13" />
+    <br>
+    <br>
+    <label>Nopeus 1:</label>
+    <input type="text" onfocus="this.value=''" id="kmh1" size="13" />
+    <br>
+    <br>
+    <label>Nopeus 2:</label>
+    <input type="text" onfocus="this.value=''" id="kmh2" size="13" />
+    <br>
+    <br>
+    <input type="image" src="down.png" class="laske" value="Laske" onclick="laskeA()" />
+    <br><br>
+    <div id="vastausA"></div>
+    <br>
+    <br>
+    <div id="eroA"></div>
+    </section>
+  </div>
+  <br>
+  <br>
+  <img src=auto2.png class="auto page-section" id="autoB">
+  <div id="autotB">
+    <div class="tooltip"> Auto B
+      <span class="tooltiptext">3.5L/100km</span>
+    </div>
+    <br>
+    <br>
+    <label>Etäisyys:</label>
+    <input type="text" onfocus="this.value=''" id="kmB" size="13" />
+    <br>
+    <br>
+    <label>Nopeus 1:</label>
+    <input type="text" onfocus="this.value=''" id="kmh1B" size="13" />
+    <br>
+    <br>
+    <label>Nopeus 2:</label>
+    <input type="text" onfocus="this.value=''" id="kmh2B" size="13" />
+    <br>
+    <br>
+    <input type="image" src="down.png" class="laske" value="Laske" onclick="laskeB()" />
+    <br><br>
+    <div id="vastausB"></div>
+    <br>
+    <br>
+    <div id="eroB"></div>
+    </section>
+  </div>
+  <br>
+  <br>
+  <img src=auto3.png class="auto page-section" id="autoC">
+  <div id="autotC">
+    <div class="tooltip"> Auto C
+      <span class="tooltiptext">4L/100km</span>
+    </div>
+    <br>
+    <br>
+    <label>Etäisyys:</label>
+    <input type="text" onfocus="this.value=''" id="kmC" size="13" />
+    <br>
+    <br>
+    <label>Nopeus 1:</label>
+    <input type="text" onfocus="this.value=''" id="kmh1C" size="13" />
+    <br>
+    <br>
+    <label>Nopeus 2:</label>
+    <input type="text" onfocus="this.value=''" id="kmh2C" size="13" />
+    <br>
+    <br>
+    <input type="image" src="down.png" class="laske" value="Laske" onclick="laskeC()" />
+    <br><br>
+    <div id="vastausC"></div>
+    <br>
+    <br>
+    <div id="eroC"></div>
+    </section>
+  </div>
+
+  <div class="ohjeita">
+    <h4 id="ohjaus">Ohjeet</h4>
+    <p id="tekstit">Klikkaa haluttua autoa ja eteesi avautuu laskuri, jolla pystyt laskemaan matka-ajan ja kahden eri
+      nopeuden perusteella matkaan kuluvan ajan, polttoaineen kulutuksen sekä eri nopeuksien välisen eron. Autojen
+      kulutuksen pystyt tarkastamaan viemällä hiiren avautuvan laskurin otsikkoon (Auto A, Auto B, Auto C).</p>
+    <h4 id="ohje">Tehtävänanto </h4>
+    <p id="teksti">Kesälomat lähestyvät ja monien katseet kääntyvät kohti kesämökkejä. Osalla nämä löytyvät lähempää,
+      osalla taas matkustukseen kuluu pitkiäkin aikoja. Monesti tien päällä ollessa tuntuu siltä, että jos hieman vielä
+      kiihdyttäisi, olisi perillä merkittävästi nopeammin… vai olisiko sittenkään? Ovatko voitetut minuutit kasvaneiden
+      matkakustannusten arvoisia? Entä kuinka paljon matkustusajoneuvon tyyppi vaikuttaa tähän?
+
+      Tehtävänäsi on toteuttaa autoilumittari-sovellus. Sovelluksen tulee pystyä suorittamaan vertailu matka-ajan ja
+      polttoaineen kulutuksen välillä kahden eri valitun nopeuden mukaan: käyttäjä ilmoittaa saman matkustettavan
+      etäisyyden samalla kulkuneuvotyypillä eri nopeuksilla ja sovellus laskee miten paljon nopeammin käyttäjä on
+      perillä ja kuinka paljon enemmän polttoainetta tähän kuluu. Etäisyyden sekä kulkuneuvotyypin tulee siis olla
+      molemmissa samat. Sovelluksen tulee pystyä näyttämään web-käyttöliittymässä molemmista annetuista matkanopeuksista
+      käytetty aika ja polttoaine, sekä näiden kahden ero.
+
+      Sovelluksessa tulee pystyä tarkastelemaan kolmen erilaisen auton tuloksia. Autojen bensankulutus kasvaa 1.009
+      kulmakertoimella. Eli jos auton nopeus kasvaa 1km/h, niin bensankulutus kasvaa 1.009 kertaiseksi. Eri autojen
+      bensakulutus 1km/h nopeudella on seuraava:
+
+      Auto A: 3l / 100km
+      Auto B: 3.5l / 100km
+      Auto C: 4l / 100km.
+    </p>
+  </div>
+  <br>
+
+  <script>
+    function laskeA() {
+      var km = document.getElementById("km").value;
+      var kmh1 = document.getElementById("kmh1").value;
+      var kmh2 = document.getElementById("kmh2").value;
+
+      var kmAika1 = km / kmh1 * 60;
+      var kmAika2 = km / kmh2 * 60;
+      var kmKulutus = 0.03 * km * 0.01009;
+      var kmNopeus1 = kmKulutus * kmh1;
+      var kmNopeus2 = kmKulutus * kmh2;
+
+      document.getElementById("vastausA").innerHTML = "Nopeudella 1 ajamiseen kuluva aika on " + kmAika1.toFixed(2) + " minuuttia. Polttoainetta kuluu " + kmNopeus1.toFixed(1) + " litraa. Nopeudella 2 kuluva aika on " + kmAika2.toFixed(2) + " minuuttia. Polttoainetta kuluu " + kmNopeus2.toFixed(1) + " litraa.";
+
+      var eroAika = kmAika1 - kmAika2;
+      var eroKulu = kmNopeus1 - kmNopeus2;
+
+      document.getElementById("eroA").innerHTML = "Ero  " + eroAika.toFixed(2) + " minuuttia. Ero polttoainekulutuksessa on " + eroKulu.toFixed(2) + " litraa.";
+    }
+
+    function laskeB() {
+      var kmB = document.getElementById("kmB").value;
+      var kmh1B = document.getElementById("kmh1B").value;
+      var kmh2B = document.getElementById("kmh2B").value;
+
+      var kmAika1B = kmB / kmh1B * 60;
+      var kmAika2B = kmB / kmh2B * 60;
+      var kmKulutusB = 0.035 * kmB * 0.01009;
+      var kmNopeus1B = kmKulutusB * kmh1B;
+      var kmNopeus2B = kmKulutusB * kmh2B;
+
+      document.getElementById("vastausB").innerHTML = "Nopeudella 1 ajamiseen kuluva aika on  " + kmAika1B.toFixed(2) + " minuuttia. Polttoainetta kuluu " + kmNopeus1B.toFixed(1) + " litraa. Nopeudella 2 kuluva aika on  " + kmAika2B.toFixed(2) + " minuuttia. Polttoainetta kuluu " + kmNopeus2B.toFixed(1) + " litraa.";
+
+      var eroAikaB = kmAika1B - kmAika2B;
+      var eroKuluB = kmNopeus1B - kmNopeus2B;
+
+      document.getElementById("eroB").innerHTML = "Ero on " + eroAikaB.toFixed(2) + " minuuttia. Ero polttoainekulutuksessa on " + eroKuluB.toFixed(2) + " litraa.";
+    }
+
+    function laskeC() {
+      var kmC = document.getElementById("kmC").value;
+      var kmh1C = document.getElementById("kmh1C").value;
+      var kmh2C = document.getElementById("kmh2C").value;
+
+      var kmAika1C = kmC / kmh1C * 60;
+      var kmAika2C = kmC / kmh2C * 60;
+      var kmKulutusC = 0.04 * kmC * 0.01009;
+      var kmNopeus1C = kmKulutusC * kmh1C;
+      var kmNopeus2C = kmKulutusC * kmh2C;
+
+      document.getElementById("vastausC").innerHTML = "Nopeudella 1 ajamiseen kuluva aika on  " + kmAika1C.toFixed(2) + " minuuttia. Polttoainetta kuluu " + kmNopeus1C.toFixed(1) + " litraa. Nopeudella 2 kuluva aika on " + kmAika2C.toFixed(2) + " minuuttia. Polttoainetta kuluu " + kmNopeus2C.toFixed(1) + " litraa.";
+
+      var eroAikaC = kmAika1C - kmAika2C;
+      var eroKuluC = kmNopeus1C - kmNopeus2C;
+
+      document.getElementById("eroC").innerHTML = "Ero on " + eroAikaC.toFixed(2) + " minuuttia. Ero polttoainekulutuksessa on " + eroKuluC.toFixed(2) + " litraa.";
+    }
+
+    $(document).ready(function () {
+      $("#autoA").click(function () {
+        $("#autot").slideToggle("slow");
+      });
+    });
+
+    $(document).ready(function () {
+      $("#autoB").click(function () {
+        $("#autotB").slideToggle("slow");
+      });
+    });
+
+    $(document).ready(function () {
+      $("#autoC").click(function () {
+        $("#autotC").slideToggle("slow");
+      });
+    });
+
+    $(document).ready(function () {
+      $("#ohje").click(function () {
+        $("#teksti").slideToggle("slow");
+      });
+    });
+
+    $(document).ready(function () {
+      $("#ohjaus").click(function () {
+        $("#tekstit").slideToggle("slow");
+      });
+    });
+  </script>
+</body>
+<footer>
+  <h4>Oona Hakkarainen</h4>
+  <a href="mailto:oona.hakkarainen@gmail.com">
+    <img alt="" src="email.png" class="round">
+  </a>
+</footer>
+
+</html>

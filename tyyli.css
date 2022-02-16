@@ -1,0 +1,157 @@
+
+body {
+    max-width: 500px;
+    margin: auto;
+    font-family: 'Rhodium Libre', serif;
+    text-align: center;
+}
+
+.logo {
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.auto {
+    width: 90%;
+    margin-bottom: 60px;
+}
+
+#autot {
+    display: none;
+    font-size: 20px;
+}
+
+#autotB {
+    display: none;
+    font-size: 20px;
+}
+
+#autotC {
+    display: none;
+    font-size: 20px;
+}
+
+#teksti {
+    display: none;
+}
+
+#tekstit {
+    display: none;
+}
+
+.topnav {
+    color: white;
+    font-family: 'Rhodium Libre', serif;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: bold; 
+    margin: 0px 5px; 
+}		 
+
+.topnav {
+overflow: hidden;
+
+}
+
+.topnav a {
+float: left;
+display: block;
+color: #3e372d;
+padding: 14px 20px;
+text-decoration: none;
+font-size: 27px;
+margin-bottom: 50px;
+}
+
+.topnav a:hover {
+background-color: #ddd;
+color: #C7273F;
+border-radius: 4px;
+}
+
+.laske {
+    width: 70px;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Rhodium Libre', serif;
+}
+
+h3 {
+    text-align: center;
+    font-family: 'Rhodium Libre', serif;
+}
+
+h4 {
+    text-align: center;
+    font-family: 'Rhodium Libre', serif;
+    margin-bottom: 0px !important;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 150px;
+    background-color:#C7273F;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+   
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+} 
+
+::-moz-selection {
+    color:#ffffff;
+    background: #C7273F;
+}
+        
+::selection {
+    color:#ffffff;
+    background: #C7273F;
+}
+
+.round {
+    width: 60px;
+}
+
+.ohjeita {
+    margin-top: 40px;
+}
+
+#ohje {
+    border: 2px solid black;
+    background-color: #ddd;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    color:  #C7273F;
+}
+
+#ohjaus {
+    border: 2px solid black;
+    background-color: #ddd;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    color:  #C7273F;
+}
